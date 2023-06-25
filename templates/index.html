@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Generative AI Detection</title>
+    <title>GPT2PPL Web App</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <nav class="navbar navbar-dark bg-dark">
-        <span class="navbar-brand mb-0 h1">Generative AI Detection</span>
+        <span class="navbar-brand mb-0 h1">GPT2PPL Web App</span>
     </nav>
 
     <div class="container mt-5">
@@ -17,6 +17,44 @@
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+
+        {% if results %}
+            <h2>Result</h2>
+            <table class="table table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Metric</th>
+                        <th scope="col">Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Input Sentence</th>
+                        <td>{{ sentence }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Perplexity</th>
+                        <td>{{ results["Perplexity"] }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Perplexity per Line</th>
+                        <td>{{ results["Perplexity per line"] }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Burstiness</th>
+                        <td>{{ results["Burstiness"] }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>{{ results["label"] }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Output</th>
+                        <td>{{ output }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        {% endif %}
     </div>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
