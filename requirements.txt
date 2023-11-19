@@ -1,7 +1,6 @@
 flask
 numpy
 scikit-learn
-torch 
 transformers
-gunicorn 
+uvnicorn 
 
