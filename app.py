@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
-# import torch
-# import re
+import torch
+import re
 from transformers import GPT2LMHeadModel, GPT2TokenizerFast
 from collections import OrderedDict
 
