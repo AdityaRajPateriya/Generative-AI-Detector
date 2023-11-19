@@ -3,3 +3,4 @@ numpy
 scikit-learn
 transformers
 gunicorn==19.7.1
+pyTorch
