@@ -2,5 +2,4 @@ flask
 numpy
 scikit-learn
 transformers
-uvicorn 
-
+gunicorn==19.7.1
