@@ -2,5 +2,5 @@ flask
 numpy
 scikit-learn
 transformers
-uvnicorn 
+uvicorn 
 
